@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy Something" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WG2-Gp-yRQ">
+                                <rect key="frame" x="102.5" y="5" width="116.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vi5-QS-JWL">
+                                <rect key="frame" x="22" y="32" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="JRV-5n-KMr"/>
+                                    <constraint firstAttribute="height" constant="48" id="nEs-20-Rap"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="ic_mic_48pt"/>
+                                <connections>
+                                    <action selector="tapOnMicrophone:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="AYM-cW-NCu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiV-e9-QtC">
+                                <rect key="frame" x="256" y="32" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="7Xb-Mu-SQJ"/>
+                                    <constraint firstAttribute="height" constant="48" id="kSt-T4-jQk"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="ic_photo_48pt"/>
+                                <connections>
+                                    <action selector="tapOnPhoto:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="zc9-9r-MqV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGg-iR-mUp">
+                                <rect key="frame" x="136" y="34" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Fjf-Ln-OXU"/>
+                                    <constraint firstAttribute="width" constant="48" id="Z5F-j5-WiL"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="ic_photo_camera_48pt"/>
+                                <connections>
+                                    <action selector="tapOnCamera:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="abh-8V-XWc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="gGg-iR-mUp" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="3aG-aR-529"/>
+                            <constraint firstItem="hiV-e9-QtC" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="32" id="PP0-U9-2cz"/>
+                            <constraint firstItem="vi5-QS-JWL" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="32" id="Xxm-qJ-nbt"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="hiV-e9-QtC" secondAttribute="trailing" constant="16" id="bOA-I9-vcA"/>
+                            <constraint firstItem="vi5-QS-JWL" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="22" id="dqq-Wb-tYI"/>
+                            <constraint firstItem="WG2-Gp-yRQ" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="5" id="i4V-ju-qB5"/>
+                            <constraint firstItem="gGg-iR-mUp" firstAttribute="top" secondItem="WG2-Gp-yRQ" secondAttribute="bottom" constant="8" id="jJT-IA-9NE"/>
+                            <constraint firstItem="WG2-Gp-yRQ" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="tQP-Ca-lq3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="80"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.59999999999999" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_mic_48pt" width="48" height="48"/>
+        <image name="ic_photo_48pt" width="48" height="48"/>
+        <image name="ic_photo_camera_48pt" width="48" height="48"/>
+    </resources>
+</document>
