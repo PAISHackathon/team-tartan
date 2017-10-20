@@ -67,7 +67,14 @@
         if (!itemCode) break;
 
         NSString *itemURLString = [NSBundle.mainBundle objectForInfoDictionaryKey:@"IchibaShoppingPrefixURL"];
-        if (!itemURLString.length) break;
+        if (!itemURLString.length)
+        {
+            NSLog(@"Oops, you forgot to set a IchibaShoppingPrefixURL");
+            break;
+        }
+        
+        itemURLString = [itemURLString stringByAppendingString:itemCode];
+        if (!itemURLString) break;
         
         return [NSURL URLWithString:itemURLString];
     } while(0);
